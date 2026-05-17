@@ -37,13 +37,20 @@ if (location.protocol === 'file:') {
   showScreen('file-error');
   setupCopyBtn();
 } else {
-  fetch('data/activities.json')
-    .then(r => r.json())
+  loadData()
     .then(init)
     .catch(() => {
       showScreen('file-error');
       setupCopyBtn();
     });
+}
+
+function loadData() {
+  const stored = localStorage.getItem('family-wheel-data');
+  if (stored) {
+    try { return Promise.resolve(JSON.parse(stored)); } catch(e) {}
+  }
+  return fetch('data/activities.json').then(r => r.json());
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────

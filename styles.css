@@ -391,6 +391,17 @@ h2 {
 
 .copy-btn:hover { background: #6666aa; }
 
+/* ── Admin link (discrete, bottom-right of inputs screen) ───────── */
+.admin-link {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.45;
+  align-self: flex-end;
+  padding: 4px 2px;
+}
+.admin-link:hover { opacity: 0.9; }
+
 /* ── Confetti ────────────────────────────────────────────────────── */
 .confetti-piece {
   position: fixed;

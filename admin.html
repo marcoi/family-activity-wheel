@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Manager</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="admin-app">
+
+  <header class="admin-header">
+    <a href="index.html" class="back-link">← Back to app</a>
+    <h1>Activity Manager</h1>
+    <div class="header-btns">
+      <button class="btn-ghost" id="reset-btn" title="Reload from original activities.json">Reset</button>
+      <button class="btn-primary" id="export-btn">Export JSON</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="btn-add" id="add-btn">+ New activity</button>
+    <input type="search" id="search" placeholder="Search activities…" autocomplete="off">
+  </div>
+
+  <p class="count-bar" id="activity-count"></p>
+
+  <p class="info-note">
+    Changes save automatically in this browser.
+    To update all devices, click <strong>Export JSON</strong> and replace <code>data/activities.json</code>.
+  </p>
+
+  <div id="activity-list"></div>
+
+  <!-- Edit / New modal -->
+  <div id="modal-overlay" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Edit activity</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      </div>
+
+      <form id="edit-form" novalidate>
+        <div class="form-field">
+          <label for="field-name">Name</label>
+          <input type="text" id="field-name" required autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="field-dur-min">Min duration <span class="hint">(minutes)</span></label>
+            <input type="number" id="field-dur-min" min="1" max="300">
+          </div>
+          <div class="form-field">
+            <label for="field-dur-max">Max duration <span class="hint">(minutes)</span></label>
+            <input type="number" id="field-dur-max" min="1" max="300">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="field-people-min">Min people</label>
+            <input type="number" id="field-people-min" min="1" max="20">
+          </div>
+          <div class="form-field">
+            <label for="field-people-max">Max people <span class="hint">(blank = unlimited)</span></label>
+            <input type="number" id="field-people-max" min="1" max="20">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Who can join</label>
+          <div class="check-grid" id="field-who"></div>
+        </div>
+
+        <div class="form-field">
+          <label>Tags</label>
+          <div class="check-grid" id="field-tags"></div>
+          <div class="add-tag-row">
+            <input type="text" id="new-tag-input" placeholder="Add new tag and press Enter…" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-danger" id="delete-btn">Delete</button>
+          <div class="modal-footer-right">
+            <button type="button" class="btn-ghost" id="cancel-btn">Cancel</button>
+            <button type="submit" class="btn-primary">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
