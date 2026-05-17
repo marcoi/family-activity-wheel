@@ -14,9 +14,9 @@ const SECTOR_COLORS = [
 ];
 
 const state = {
-  time:      45,
-  people:    2,
-  who:       Object.keys(WHO_LABELS),  // all selected by default
+  time:      15,
+  people:    1,
+  who:       ['kids_only'],
   tags:      [],
   filtered:  [],
   winner:    null,
@@ -45,8 +45,8 @@ function init(data) {
   buildChips('who-chips', Object.keys(WHO_LABELS), WHO_LABELS, state.who);
   buildChips('tag-chips', data._meta.tags, null, state.tags);
 
-  // Pre-select 45 min
-  document.querySelector('.time-btn[data-value="45"]').classList.add('selected');
+  // Pre-select 15 min
+  document.querySelector('.time-btn[data-value="15"]').classList.add('selected');
 
   updatePeopleDisplay();
 
