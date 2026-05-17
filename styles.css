@@ -90,6 +90,9 @@ h2 {
 .field--who    { border-left-color: #2F9E44; }
 .field--who    > label { color: #2f9e44; }
 
+.field--category { border-left-color: #4263EB; }
+.field--category > label { color: #3451c7; }
+
 .field--tags   { border-left-color: #F59F00; }
 .field--tags   > label { color: #e67700; }
 

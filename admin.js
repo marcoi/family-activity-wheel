@@ -40,7 +40,14 @@ if (location.protocol === 'file:') {
 async function loadData() {
   const stored = localStorage.getItem(STORAGE_KEY);
   if (stored) {
-    try { data = JSON.parse(stored); return; } catch(e) {}
+    try {
+      const parsed = JSON.parse(stored);
+      // Reject stale data that predates the categories field
+      if (parsed._meta?.categories?.length > 0) {
+        data = parsed;
+        return;
+      }
+    } catch(e) {}
   }
   const r = await fetch('data/activities.json');
   data = await r.json();

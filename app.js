@@ -20,15 +20,29 @@ const TAG_COLORS = [
   '#CC5DE8', '#20C997', '#F06595', '#74C0FC', '#A9E34B', '#845EF7',
 ];
 
+const CAT_COLORS = {
+  cards:        '#4263EB',
+  crafts:       '#F06595',
+  boardgames:   '#CC5DE8',
+  puzzles:      '#F59F00',
+  construction: '#FF922B',
+  active:       '#2F9E44',
+  books:        '#74C0FC',
+  cooking:      '#FF6B6B',
+  learning:     '#20C997',
+  pretend:      '#845EF7',
+};
+
 const state = {
-  time:      15,
-  people:    1,
-  who:       ['kids_only'],
-  tags:      [],
-  filtered:  [],
-  winner:    null,
-  spinAngle: 0,
-  spinning:  false,
+  time:       15,
+  people:     1,
+  who:        ['kids_only'],
+  tags:       [],
+  categories: [],
+  filtered:   [],
+  winner:     null,
+  spinAngle:  0,
+  spinning:   false,
 };
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
@@ -48,7 +62,13 @@ if (location.protocol === 'file:') {
 function loadData() {
   const stored = localStorage.getItem('family-wheel-data');
   if (stored) {
-    try { return Promise.resolve(JSON.parse(stored)); } catch(e) {}
+    try {
+      const parsed = JSON.parse(stored);
+      // Reject stale data that predates the categories field
+      if (parsed._meta?.categories?.length > 0) {
+        return Promise.resolve(parsed);
+      }
+    } catch(e) {}
   }
   return fetch('data/activities.json').then(r => r.json());
 }
@@ -57,6 +77,8 @@ function loadData() {
 
 function init(data) {
   buildChips('who-chips', Object.keys(WHO_LABELS), WHO_LABELS, state.who, { exclusive: true, colors: WHO_COLORS });
+  buildChips('category-chips', data._meta.categories, null, state.categories,
+    { colors: data._meta.categories.map(c => CAT_COLORS[c] || '#aaa') });
   buildChips('tag-chips', data._meta.tags, null, state.tags, { colors: TAG_COLORS });
 
   // Pre-select 15 min
@@ -194,6 +216,7 @@ function filterActivities() {
     if (a.max_people !== null && state.people > a.max_people) return false;
     if (state.who.length > 0 && !state.who.some(w => a.who.includes(w))) return false;
     if (state.tags.length > 0 && !state.tags.some(t => a.tags.includes(t))) return false;
+    if (state.categories.length > 0 && !state.categories.includes(a.category)) return false;
     return true;
   });
 }
