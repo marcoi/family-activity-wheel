@@ -13,7 +13,7 @@
     <section id="screen-inputs" class="screen">
       <h1>What shall we do?</h1>
 
-      <div class="field">
+      <div class="field field--time">
         <label>How much time?</label>
         <div class="time-buttons">
           <button class="time-btn" data-value="15">15 min</button>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="field">
+      <div class="field field--people">
         <label>How many people?</label>
         <div class="stepper">
           <button class="stepper-btn" id="people-minus" aria-label="Fewer people">−</button>
@@ -33,14 +33,9 @@
         </div>
       </div>
 
-      <div class="field">
+      <div class="field field--who">
         <label>Who's there?</label>
         <div class="chips" id="who-chips"></div>
-      </div>
-
-      <div class="field">
-        <label>What kind of activity? <span class="optional">(optional)</span></label>
-        <div class="chips" id="tag-chips"></div>
       </div>
 
       <button class="primary-btn" id="go-btn">Spin the wheel!</button>

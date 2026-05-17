@@ -18,7 +18,7 @@
 
 html, body {
   height: 100%;
-  background: var(--bg);
+  background: linear-gradient(160deg, #fff5f5 0%, #f8f0ff 45%, #f0fff8 100%);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
@@ -45,9 +45,13 @@ html, body {
 h1 {
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--primary);
   text-align: center;
   flex-shrink: 0;
+  /* gradient text */
+  background: linear-gradient(90deg, #ff6b6b, #ff922b, #cc5de8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
@@ -56,26 +60,35 @@ h2 {
   text-align: center;
 }
 
-/* ── Field ───────────────────────────────────────────────────────── */
+/* ── Field cards ─────────────────────────────────────────────────── */
 .field {
   width: 100%;
   max-width: 440px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   flex-shrink: 0;
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-left: 5px solid transparent;
 }
 
 .field > label {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
-.optional {
-  font-weight: 400;
-  font-size: 0.85em;
-  color: var(--muted);
-}
+/* Per-field accent colours */
+.field--time   { border-left-color: #FF6B6B; }
+.field--time   > label { color: #e03131; }
+
+.field--people { border-left-color: #7950F2; }
+.field--people > label { color: #7048e8; }
+
+.field--who    { border-left-color: #2F9E44; }
+.field--who    > label { color: #2f9e44; }
 
 /* ── Time buttons ────────────────────────────────────────────────── */
 .time-buttons {
@@ -84,22 +97,29 @@ h2 {
   gap: 8px;
 }
 
+/* Assign a colour to each button via CSS custom property */
+.time-buttons .time-btn:nth-child(1) { --c: #FF6B6B; }
+.time-buttons .time-btn:nth-child(2) { --c: #FF922B; }
+.time-buttons .time-btn:nth-child(3) { --c: #F59F00; }
+.time-buttons .time-btn:nth-child(4) { --c: #2F9E44; }
+.time-buttons .time-btn:nth-child(5) { --c: #4263EB; }
+
 .time-btn {
   min-height: 44px;
   padding: 0 20px;
   border-radius: 100px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--c, var(--border));
   background: var(--surface);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  color: var(--text);
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  color: var(--c, var(--text));
+  transition: background 0.15s, color 0.15s;
 }
 
 .time-btn.selected {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--c, var(--primary));
+  border-color: var(--c, var(--primary));
   color: #fff;
 }
 
@@ -107,7 +127,7 @@ h2 {
 .stepper {
   display: inline-flex;
   align-items: center;
-  border: 2px solid var(--border);
+  border: 2px solid #7950F2;
   border-radius: 100px;
   overflow: hidden;
   background: var(--surface);
@@ -122,19 +142,20 @@ h2 {
   font-size: 1.6rem;
   font-weight: 700;
   cursor: pointer;
-  color: var(--primary);
+  color: #7950F2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stepper-btn:active { background: #ffe8d8; }
+.stepper-btn:active { background: #f0eaff; }
 
 #people-count {
   min-width: 56px;
   text-align: center;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 800;
+  color: #7950F2;
   pointer-events: none;
   user-select: none;
 }
@@ -146,25 +167,32 @@ h2 {
   gap: 8px;
 }
 
+/* Base chip (used by who-chips) */
 .chip {
   min-height: 44px;
   padding: 0 18px;
   border-radius: 100px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--c, var(--border));
   background: var(--surface);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  color: var(--text);
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  color: var(--c, var(--text));
+  transition: background 0.15s, color 0.15s;
   text-transform: capitalize;
 }
 
 .chip.selected {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--c, var(--primary));
+  border-color: var(--c, var(--primary));
   color: #fff;
 }
+
+/* Who chip colours (4 chips, one per who value) */
+#who-chips .chip:nth-child(1) { --c: #FF6B6B; }
+#who-chips .chip:nth-child(2) { --c: #4263EB; }
+#who-chips .chip:nth-child(3) { --c: #2F9E44; }
+#who-chips .chip:nth-child(4) { --c: #CC5DE8; }
 
 /* ── Primary / secondary buttons ─────────────────────────────────── */
 .primary-btn {
@@ -180,6 +208,14 @@ h2 {
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.15s, transform 0.1s;
+}
+
+/* Rainbow gradient on the inputs-screen spin button specifically */
+#screen-inputs .primary-btn {
+  background: linear-gradient(135deg, #ff6b35 0%, #e91e8c 100%);
+}
+#screen-inputs .primary-btn:hover {
+  background: linear-gradient(135deg, #e85a24 0%, #c5186d 100%);
 }
 
 .primary-btn:hover  { background: var(--primary-dark); }
