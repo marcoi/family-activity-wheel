@@ -93,19 +93,6 @@ h2 {
 .field--tags   { border-left-color: #F59F00; }
 .field--tags   > label { color: #e67700; }
 
-/* Tag chip colours — cycle through a palette */
-#tag-chips .chip:nth-child(12n+1)  { --c: #FF6B6B; }
-#tag-chips .chip:nth-child(12n+2)  { --c: #FF922B; }
-#tag-chips .chip:nth-child(12n+3)  { --c: #F59F00; }
-#tag-chips .chip:nth-child(12n+4)  { --c: #2F9E44; }
-#tag-chips .chip:nth-child(12n+5)  { --c: #4263EB; }
-#tag-chips .chip:nth-child(12n+6)  { --c: #CC5DE8; }
-#tag-chips .chip:nth-child(12n+7)  { --c: #20C997; }
-#tag-chips .chip:nth-child(12n+8)  { --c: #F06595; }
-#tag-chips .chip:nth-child(12n+9)  { --c: #74C0FC; }
-#tag-chips .chip:nth-child(12n+10) { --c: #A9E34B; }
-#tag-chips .chip:nth-child(12n+11) { --c: #FF6B35; }
-#tag-chips .chip:nth-child(12n+12) { --c: #845EF7; }
 
 /* ── Time buttons ────────────────────────────────────────────────── */
 .time-buttons {
@@ -205,11 +192,6 @@ h2 {
   color: #fff;
 }
 
-/* Who chip colours (4 chips, one per who value) */
-#who-chips .chip:nth-child(1) { --c: #FF6B6B; }
-#who-chips .chip:nth-child(2) { --c: #4263EB; }
-#who-chips .chip:nth-child(3) { --c: #2F9E44; }
-#who-chips .chip:nth-child(4) { --c: #CC5DE8; }
 
 /* ── Primary / secondary buttons ─────────────────────────────────── */
 .primary-btn {

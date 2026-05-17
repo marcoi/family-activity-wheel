@@ -5,7 +5,6 @@
       "active",
       "creative",
       "learning",
-      "screen",
       "messy",
       "outdoor",
       "indoor",
@@ -92,7 +91,7 @@
     { "name": "Other construction toys", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
     { "name": "Rebuild LEGO characters", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
 
-    { "name": "Osmo", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "screen", "solo-friendly", "indoor"] },
+    { "name": "Osmo", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "solo-friendly", "indoor"] },
     { "name": "Learning books", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "quiet", "solo-friendly", "indoor"] },
     { "name": "Rainbow lab", "duration_min": 20, "duration_max": 45, "min_people": 1, "max_people": 3, "who": ["with_parents", "with_nanny"], "tags": ["learning", "messy", "indoor"] },
     { "name": "Programmable robot", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 3, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "solo-friendly", "indoor"] },

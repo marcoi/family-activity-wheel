@@ -13,6 +13,13 @@ const SECTOR_COLORS = [
   '#74C0FC', '#A9E34B', '#FFB340', '#63E6BE',
 ];
 
+const WHO_COLORS = ['#FF6B6B', '#4263EB', '#2F9E44', '#CC5DE8'];
+
+const TAG_COLORS = [
+  '#FF6B6B', '#FF922B', '#F59F00', '#2F9E44', '#4263EB',
+  '#CC5DE8', '#20C997', '#F06595', '#74C0FC', '#A9E34B', '#845EF7',
+];
+
 const state = {
   time:      15,
   people:    1,
@@ -42,8 +49,8 @@ if (location.protocol === 'file:') {
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 function init(data) {
-  buildChips('who-chips', Object.keys(WHO_LABELS), WHO_LABELS, state.who);
-  buildChips('tag-chips', data._meta.tags, null, state.tags);
+  buildChips('who-chips', Object.keys(WHO_LABELS), WHO_LABELS, state.who, { exclusive: true, colors: WHO_COLORS });
+  buildChips('tag-chips', data._meta.tags, null, state.tags, { colors: TAG_COLORS });
 
   // Pre-select 15 min
   document.querySelector('.time-btn[data-value="15"]').classList.add('selected');
@@ -102,21 +109,34 @@ function updatePeopleDisplay() {
     state.people >= 8 ? '8+' : String(state.people);
 }
 
-function buildChips(containerId, values, labels, stateArray) {
+function buildChips(containerId, values, labels, stateArray, opts = {}) {
   const container = document.getElementById(containerId);
   if (!container) return;
-  values.forEach(val => {
+  values.forEach((val, i) => {
     const btn = document.createElement('button');
     btn.className = 'chip' + (stateArray.includes(val) ? ' selected' : '');
     btn.dataset.value = val;
     btn.textContent = labels
       ? labels[val]
       : val.charAt(0).toUpperCase() + val.slice(1).replace(/-/g, ' ');
+    if (opts.colors) {
+      btn.style.setProperty('--c', opts.colors[i % opts.colors.length]);
+    }
     btn.addEventListener('click', () => {
-      btn.classList.toggle('selected');
-      const idx = stateArray.indexOf(val);
-      if (idx === -1) stateArray.push(val);
-      else stateArray.splice(idx, 1);
+      if (opts.exclusive) {
+        const wasSelected = btn.classList.contains('selected');
+        container.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+        stateArray.length = 0;
+        if (!wasSelected) {
+          btn.classList.add('selected');
+          stateArray.push(val);
+        }
+      } else {
+        btn.classList.toggle('selected');
+        const idx = stateArray.indexOf(val);
+        if (idx === -1) stateArray.push(val);
+        else stateArray.splice(idx, 1);
+      }
     });
     container.appendChild(btn);
   });
