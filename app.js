@@ -43,6 +43,7 @@ if (location.protocol === 'file:') {
 
 function init(data) {
   buildChips('who-chips', Object.keys(WHO_LABELS), WHO_LABELS, state.who);
+  buildChips('tag-chips', data._meta.tags, null, state.tags);
 
   // Pre-select 15 min
   document.querySelector('.time-btn[data-value="15"]').classList.add('selected');
