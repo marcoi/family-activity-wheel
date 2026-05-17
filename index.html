@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Activity Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- Screen 1: Inputs -->
+    <section id="screen-inputs" class="screen">
+      <h1>What shall we do?</h1>
+
+      <div class="field">
+        <label>How much time?</label>
+        <div class="time-buttons">
+          <button class="time-btn" data-value="15">15 min</button>
+          <button class="time-btn" data-value="30">30 min</button>
+          <button class="time-btn" data-value="45">45 min</button>
+          <button class="time-btn" data-value="60">60 min</button>
+          <button class="time-btn" data-value="90">90+ min</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>How many people?</label>
+        <div class="stepper">
+          <button class="stepper-btn" id="people-minus" aria-label="Fewer people">−</button>
+          <span id="people-count">2</span>
+          <button class="stepper-btn" id="people-plus" aria-label="More people">+</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Who's there?</label>
+        <div class="chips" id="who-chips"></div>
+      </div>
+
+      <div class="field">
+        <label>What kind of activity? <span class="optional">(optional)</span></label>
+        <div class="chips" id="tag-chips"></div>
+      </div>
+
+      <button class="primary-btn" id="go-btn">Spin the wheel!</button>
+    </section>
+
+    <!-- Screen 2: Wheel -->
+    <section id="screen-wheel" class="screen">
+      <h1>Spin!</h1>
+
+      <div id="wheel-wrap">
+        <div id="wheel-container">
+          <div id="wheel-pointer"></div>
+          <canvas id="wheel-canvas"></canvas>
+        </div>
+      </div>
+
+      <div id="too-few-msg" class="hidden">
+        <p>Hmm, not enough matches!</p>
+        <p>Go back and loosen your filters a little.</p>
+      </div>
+
+      <button class="primary-btn" id="do-spin-btn">Spin!</button>
+      <button class="secondary-btn" id="wheel-back-btn">Back to filters</button>
+    </section>
+
+    <!-- Screen 3: Result -->
+    <section id="screen-result" class="screen">
+      <div id="result-content">
+        <div id="result-badge"></div>
+        <h2 id="result-name"></h2>
+        <p id="result-info"></p>
+        <button class="primary-btn" id="spin-again-btn">Spin again!</button>
+        <button class="secondary-btn" id="start-over-btn">Change filters</button>
+      </div>
+    </section>
+
+    <!-- File:// notice -->
+    <section id="screen-file-error" class="screen">
+      <h2>One small step first</h2>
+      <p>This app loads data with <code>fetch()</code>, which needs a local server — not a <code>file://</code> URL.</p>
+      <p>Open a terminal in this folder and run:</p>
+      <div class="code-block">
+        <code id="server-cmd">python3 -m http.server</code>
+        <button class="copy-btn" id="copy-cmd">Copy</button>
+      </div>
+      <p>Then open <strong>http://localhost:8000</strong> in your browser.</p>
+    </section>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
