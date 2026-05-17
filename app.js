@@ -104,6 +104,7 @@ function updatePeopleDisplay() {
 
 function buildChips(containerId, values, labels, stateArray) {
   const container = document.getElementById(containerId);
+  if (!container) return;
   values.forEach(val => {
     const btn = document.createElement('button');
     btn.className = 'chip' + (stateArray.includes(val) ? ' selected' : '');
