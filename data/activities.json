@@ -12,92 +12,1411 @@
       "strategy",
       "social",
       "solo-friendly"
+    ],
+    "categories": [
+      "cards",
+      "crafts",
+      "boardgames",
+      "puzzles",
+      "construction",
+      "active",
+      "books",
+      "cooking",
+      "learning",
+      "pretend"
     ]
   },
   "activities": [
-    { "name": "Read a fiction book", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor"] },
-    { "name": "Read a non-fiction book", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "learning", "solo-friendly", "indoor"] },
-    { "name": "Lone Wolf adventure book (Matteo and Papa)", "duration_min": 30, "duration_max": 90, "min_people": 2, "max_people": 2, "who": ["with_parents"], "tags": ["quiet", "imaginative", "indoor"] },
-    { "name": "Activity books", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor"] },
-
-    { "name": "Diamond Quest puzzle", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor", "strategy"] },
-    { "name": "Mini arcade puzzle", "duration_min": 5, "duration_max": 20, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor"] },
-    { "name": "Code Color puzzle", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor", "strategy"] },
-    { "name": "Solitaire", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor", "strategy"] },
-    { "name": "Rubik's cube", "duration_min": 5, "duration_max": 30, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor", "strategy"] },
-    { "name": "Other puzzles", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "solo-friendly", "indoor"] },
-
-    { "name": "Ball games", "duration_min": 15, "duration_max": 60, "min_people": 2, "max_people": 8, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["active", "social", "indoor"] },
-    { "name": "Jigsaw puzzles", "duration_min": 30, "duration_max": 120, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["quiet", "indoor"] },
-    { "name": "Darts", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["active", "indoor", "social"] },
-    { "name": "Netball (if nice weather)", "duration_min": 20, "duration_max": 60, "min_people": 2, "max_people": 8, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["active", "outdoor", "social"] },
-    { "name": "Football (if nice weather)", "duration_min": 20, "duration_max": 60, "min_people": 2, "max_people": 8, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["active", "outdoor", "social"] },
-
-    { "name": "Ticket to Ride", "duration_min": 60, "duration_max": 90, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Shakespeare (board game)", "duration_min": 30, "duration_max": 45, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Horrible Histories (board game)", "duration_min": 20, "duration_max": 45, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["learning", "social", "indoor"] },
-    { "name": "Dragon Inferno", "duration_min": 20, "duration_max": 45, "min_people": 2, "max_people": 2, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Chess", "duration_min": 15, "duration_max": 60, "min_people": 2, "max_people": 2, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "quiet", "indoor"] },
-    { "name": "Dig In", "duration_min": 10, "duration_max": 25, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "4 to Score", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 2, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "indoor"] },
-    { "name": "Monopoly", "duration_min": 60, "duration_max": 120, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Go Genius", "duration_min": 20, "duration_max": 45, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["learning", "social", "indoor"] },
-    { "name": "Concept", "duration_min": 30, "duration_max": 60, "min_people": 3, "max_people": 8, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["social", "indoor", "imaginative"] },
-    { "name": "Battleship", "duration_min": 15, "duration_max": 30, "min_people": 2, "max_people": 2, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "indoor"] },
-    { "name": "Guess Who", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 2, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "P for Pizza", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "That's Not a Hat", "duration_min": 15, "duration_max": 30, "min_people": 3, "max_people": 8, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Taskmaster (board game)", "duration_min": 30, "duration_max": 60, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["social", "indoor", "imaginative"] },
-    { "name": "Escape room game", "duration_min": 45, "duration_max": 90, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Drak Atak", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-
-    { "name": "Scopa (card game)", "duration_min": 15, "duration_max": 30, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Briscola (card game)", "duration_min": 15, "duration_max": 30, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Top Trumps", "duration_min": 10, "duration_max": 25, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Uno", "duration_min": 10, "duration_max": 30, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Memory cards", "duration_min": 10, "duration_max": 20, "min_people": 1, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["learning", "indoor", "solo-friendly"] },
-    { "name": "Spider game", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Go Fish", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Old Maid", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Happy Families", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Animal Snap", "duration_min": 5, "duration_max": 15, "min_people": 2, "max_people": 4, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-    { "name": "Monopoly Deal", "duration_min": 15, "duration_max": 30, "min_people": 2, "max_people": 5, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["strategy", "social", "indoor"] },
-    { "name": "Double (card game)", "duration_min": 10, "duration_max": 20, "min_people": 2, "max_people": 6, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["social", "indoor"] },
-
-    { "name": "Drawing", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Cooking / baking", "duration_min": 30, "duration_max": 90, "min_people": 1, "max_people": 4, "who": ["with_parents", "with_nanny"], "tags": ["creative", "messy", "learning", "indoor"] },
-    { "name": "Colouring", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "quiet", "solo-friendly", "indoor"] },
-
-    { "name": "Pretend play with animals/dinosaurs", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["imaginative", "solo-friendly", "indoor"] },
-    { "name": "Pretend play with characters", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["imaginative", "solo-friendly", "indoor"] },
-    { "name": "Pretend play with dolls/Barbies", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["imaginative", "solo-friendly", "indoor"] },
-    { "name": "Pretend play with cars", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["imaginative", "solo-friendly", "indoor"] },
-    { "name": "Pretend play with stuffed toys", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["imaginative", "solo-friendly", "indoor"] },
-    { "name": "Barbie hair styling", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "imaginative", "solo-friendly", "indoor"] },
-
-    { "name": "Painting", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "messy", "indoor"] },
-    { "name": "Sewing", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 2, "who": ["with_parents", "with_nanny"], "tags": ["creative", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Silk painting", "duration_min": 30, "duration_max": 75, "min_people": 1, "max_people": 3, "who": ["with_parents", "with_nanny"], "tags": ["creative", "messy", "indoor"] },
-    { "name": "Bracelets making", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Origami", "duration_min": 10, "duration_max": 45, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Squishy making", "duration_min": 20, "duration_max": 45, "min_people": 1, "max_people": 3, "who": ["with_parents", "with_nanny", "with_friends", "kids_only"], "tags": ["creative", "messy", "indoor"] },
-
-    { "name": "Play dough", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "messy", "imaginative", "solo-friendly", "indoor"] },
-    { "name": "LEGO (general)", "duration_min": 20, "duration_max": 90, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Duplo LEGO", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Wooden construction", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 3, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Robot pet shop", "duration_min": 20, "duration_max": 45, "min_people": 1, "max_people": 3, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "imaginative", "indoor"] },
-    { "name": "Magnetic tiles", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Other construction toys", "duration_min": 15, "duration_max": 60, "min_people": 1, "max_people": 4, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-    { "name": "Rebuild LEGO characters", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny", "with_friends"], "tags": ["creative", "solo-friendly", "indoor"] },
-
-    { "name": "Osmo", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "solo-friendly", "indoor"] },
-    { "name": "Learning books", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Rainbow lab", "duration_min": 20, "duration_max": 45, "min_people": 1, "max_people": 3, "who": ["with_parents", "with_nanny"], "tags": ["learning", "messy", "indoor"] },
-    { "name": "Programmable robot", "duration_min": 20, "duration_max": 60, "min_people": 1, "max_people": 3, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "solo-friendly", "indoor"] },
-    { "name": "Programmable mouse", "duration_min": 15, "duration_max": 45, "min_people": 1, "max_people": 3, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "solo-friendly", "indoor"] },
-    { "name": "My First Atlas", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Brain teasers", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 2, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "quiet", "solo-friendly", "indoor"] },
-    { "name": "Sudoku", "duration_min": 10, "duration_max": 30, "min_people": 1, "max_people": 1, "who": ["kids_only", "with_parents", "with_nanny"], "tags": ["learning", "quiet", "solo-friendly", "indoor"] }
+    {
+      "name": "Read a fiction book",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Read a non-fiction book",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "learning",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Lone Wolf adventure book (Matteo and Papa)",
+      "duration_min": 30,
+      "duration_max": 90,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents"
+      ],
+      "tags": [
+        "quiet",
+        "imaginative",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Activity books",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Diamond Quest puzzle",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor",
+        "strategy"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Mini arcade puzzle",
+      "duration_min": 5,
+      "duration_max": 20,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Code Color puzzle",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor",
+        "strategy"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Solitaire",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor",
+        "strategy"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Rubik's cube",
+      "duration_min": 5,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor",
+        "strategy"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Other puzzles",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Ball games",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 2,
+      "max_people": 8,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "active",
+        "social",
+        "indoor"
+      ],
+      "category": "active"
+    },
+    {
+      "name": "Jigsaw puzzles",
+      "duration_min": 30,
+      "duration_max": 120,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "quiet",
+        "indoor"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Darts",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "active",
+        "indoor",
+        "social"
+      ],
+      "category": "active"
+    },
+    {
+      "name": "Netball (if nice weather)",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 2,
+      "max_people": 8,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "active",
+        "outdoor",
+        "social"
+      ],
+      "category": "active"
+    },
+    {
+      "name": "Football (if nice weather)",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 2,
+      "max_people": 8,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "active",
+        "outdoor",
+        "social"
+      ],
+      "category": "active"
+    },
+    {
+      "name": "Ticket to Ride",
+      "duration_min": 60,
+      "duration_max": 90,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Shakespeare (board game)",
+      "duration_min": 30,
+      "duration_max": 45,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Horrible Histories (board game)",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "learning",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Dragon Inferno",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Chess",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "quiet",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Dig In",
+      "duration_min": 10,
+      "duration_max": 25,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "4 to Score",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Monopoly",
+      "duration_min": 60,
+      "duration_max": 120,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Go Genius",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "learning",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Concept",
+      "duration_min": 30,
+      "duration_max": 60,
+      "min_people": 3,
+      "max_people": 8,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "social",
+        "indoor",
+        "imaginative"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Battleship",
+      "duration_min": 15,
+      "duration_max": 30,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Guess Who",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "P for Pizza",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "That's Not a Hat",
+      "duration_min": 15,
+      "duration_max": 30,
+      "min_people": 3,
+      "max_people": 8,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Taskmaster (board game)",
+      "duration_min": 30,
+      "duration_max": 60,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "social",
+        "indoor",
+        "imaginative"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Escape room game",
+      "duration_min": 45,
+      "duration_max": 90,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Drak Atak",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "boardgames"
+    },
+    {
+      "name": "Scopa (card game)",
+      "duration_min": 15,
+      "duration_max": 30,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Briscola (card game)",
+      "duration_min": 15,
+      "duration_max": 30,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Top Trumps",
+      "duration_min": 10,
+      "duration_max": 25,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Uno",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Memory cards",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "learning",
+        "indoor",
+        "solo-friendly"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Spider game",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Go Fish",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Old Maid",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Happy Families",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Animal Snap",
+      "duration_min": 5,
+      "duration_max": 15,
+      "min_people": 2,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Monopoly Deal",
+      "duration_min": 15,
+      "duration_max": 30,
+      "min_people": 2,
+      "max_people": 5,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "strategy",
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Double (card game)",
+      "duration_min": 10,
+      "duration_max": 20,
+      "min_people": 2,
+      "max_people": 6,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "social",
+        "indoor"
+      ],
+      "category": "cards"
+    },
+    {
+      "name": "Drawing",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Cooking / baking",
+      "duration_min": 30,
+      "duration_max": 90,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "creative",
+        "messy",
+        "learning",
+        "indoor"
+      ],
+      "category": "cooking"
+    },
+    {
+      "name": "Colouring",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Pretend play with animals/dinosaurs",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "pretend"
+    },
+    {
+      "name": "Pretend play with characters",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "pretend"
+    },
+    {
+      "name": "Pretend play with dolls/Barbies",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "pretend"
+    },
+    {
+      "name": "Pretend play with cars",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "pretend"
+    },
+    {
+      "name": "Pretend play with stuffed toys",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "pretend"
+    },
+    {
+      "name": "Barbie hair styling",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Painting",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "messy",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Sewing",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "creative",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Silk painting",
+      "duration_min": 30,
+      "duration_max": 75,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "creative",
+        "messy",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Bracelets making",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Origami",
+      "duration_min": 10,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Squishy making",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "with_parents",
+        "with_nanny",
+        "with_friends",
+        "kids_only"
+      ],
+      "tags": [
+        "creative",
+        "messy",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "Play dough",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "messy",
+        "imaginative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "crafts"
+    },
+    {
+      "name": "LEGO (general)",
+      "duration_min": 20,
+      "duration_max": 90,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Duplo LEGO",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Wooden construction",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Robot pet shop",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "imaginative",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Magnetic tiles",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Other construction toys",
+      "duration_min": 15,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 4,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Rebuild LEGO characters",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny",
+        "with_friends"
+      ],
+      "tags": [
+        "creative",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "construction"
+    },
+    {
+      "name": "Osmo",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Learning books",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Rainbow lab",
+      "duration_min": 20,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "messy",
+        "indoor"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Programmable robot",
+      "duration_min": 20,
+      "duration_max": 60,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "Programmable mouse",
+      "duration_min": 15,
+      "duration_max": 45,
+      "min_people": 1,
+      "max_people": 3,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "learning"
+    },
+    {
+      "name": "My First Atlas",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "books"
+    },
+    {
+      "name": "Brain teasers",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 2,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "puzzles"
+    },
+    {
+      "name": "Sudoku",
+      "duration_min": 10,
+      "duration_max": 30,
+      "min_people": 1,
+      "max_people": 1,
+      "who": [
+        "kids_only",
+        "with_parents",
+        "with_nanny"
+      ],
+      "tags": [
+        "learning",
+        "quiet",
+        "solo-friendly",
+        "indoor"
+      ],
+      "category": "puzzles"
+    }
   ]
 }

@@ -13,6 +13,19 @@ let data        = null;
 let editingIdx  = null;   // null = new activity
 let searchQuery = '';
 
+const CAT_COLORS = {
+  cards:        '#4263EB',
+  crafts:       '#F06595',
+  boardgames:   '#CC5DE8',
+  puzzles:      '#F59F00',
+  construction: '#FF922B',
+  active:       '#2F9E44',
+  books:        '#74C0FC',
+  cooking:      '#FF6B6B',
+  learning:     '#20C997',
+  pretend:      '#845EF7',
+};
+
 // ── Boot ──────────────────────────────────────────────────────────────────────
 
 if (location.protocol === 'file:') {
@@ -89,10 +102,14 @@ function render() {
         ? `${a.min_people} ${a.min_people === 1 ? 'person' : 'people'}`
         : `${a.min_people}–${a.max_people} people`;
     const tags = a.tags.map(t => `<span class="mini-tag">${esc(t)}</span>`).join('');
+    const catColor = (a.category && CAT_COLORS[a.category]) || '#aaa';
+    const catBadge = a.category
+      ? `<span class="cat-badge" style="--cat:${catColor}">${esc(a.category)}</span>`
+      : '';
     return `
       <div class="activity-card">
         <div class="card-body">
-          <div class="card-name">${esc(a.name)}</div>
+          <div class="card-name-row">${catBadge}<span class="card-name">${esc(a.name)}</span></div>
           <div class="card-meta">${dur} · ${ppl}</div>
           <div class="card-tags">${tags}</div>
         </div>
@@ -151,7 +168,7 @@ function openModal(idx) {
   editingIdx = idx;
   const isNew = idx === null;
   const a = isNew
-    ? { name: '', duration_min: 15, duration_max: 60, min_people: 1, max_people: 4, who: ['kids_only'], tags: [] }
+    ? { name: '', duration_min: 15, duration_max: 60, min_people: 1, max_people: 4, who: ['kids_only'], tags: [], category: null }
     : { ...data.activities[idx], who: [...data.activities[idx].who], tags: [...data.activities[idx].tags] };
 
   document.getElementById('modal-title').textContent = isNew ? 'New activity' : 'Edit activity';
@@ -161,6 +178,7 @@ function openModal(idx) {
   document.getElementById('field-people-min').value  = a.min_people;
   document.getElementById('field-people-max').value  = a.max_people === null ? '' : a.max_people;
 
+  renderCategoryRadios(a.category || null);
   renderWhoCheckboxes(a.who);
   renderTagCheckboxes(a.tags);
 
@@ -169,6 +187,17 @@ function openModal(idx) {
 
   document.getElementById('modal-overlay').classList.remove('hidden');
   setTimeout(() => document.getElementById('field-name').focus(), 60);
+}
+
+function renderCategoryRadios(selected) {
+  const cats = (data._meta.categories || []);
+  document.getElementById('field-category').innerHTML = cats.map(cat => {
+    const color = CAT_COLORS[cat] || '#aaa';
+    return `<label class="check-label cat-radio" style="--cat:${color}">
+      <input type="radio" name="category" value="${esc(cat)}" ${cat === selected ? 'checked' : ''}>
+      ${esc(cat)}
+    </label>`;
+  }).join('');
 }
 
 function renderWhoCheckboxes(checked) {
@@ -228,6 +257,8 @@ function saveActivity() {
   const pplMaxRaw = document.getElementById('field-people-max').value.trim();
   const pplMax = pplMaxRaw === '' ? null : (pos(pplMaxRaw) || null);
 
+  const categoryEl = document.querySelector('#field-category input:checked');
+
   const activity = {
     name,
     duration_min: durMin,
@@ -236,6 +267,7 @@ function saveActivity() {
     max_people:   pplMax,
     who:          checkedValues('#field-who'),
     tags:         checkedValues('#field-tags'),
+    category:     categoryEl ? categoryEl.value : null,
   };
 
   if (editingIdx === null) {

@@ -123,12 +123,32 @@ body {
 
 .card-body { flex: 1; min-width: 0; }
 
+.card-name-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
 .card-name {
   font-weight: 600;
   font-size: 0.97rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.cat-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  background: color-mix(in srgb, var(--cat) 15%, white);
+  color: var(--cat);
+  border: 1px solid color-mix(in srgb, var(--cat) 35%, white);
+  white-space: nowrap;
+  text-transform: capitalize;
+  flex-shrink: 0;
 }
 
 .card-meta {
@@ -356,6 +376,14 @@ body {
   color: var(--accent);
   font-weight: 700;
 }
+
+/* Category radios use their own colour instead of the global accent */
+.cat-radio:has(input:checked) {
+  border-color: var(--cat);
+  background: color-mix(in srgb, var(--cat) 12%, white);
+  color: var(--cat);
+}
+.cat-radio input { accent-color: var(--cat); }
 .check-label input {
   width: 15px;
   height: 15px;
